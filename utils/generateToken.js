@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = "23qRIYhHnYQfZB1eiL14lL8Za/gkK5U7quK96age";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 Date.prototype.addDays = function(days){
   var date = new Date(this.valueOf());

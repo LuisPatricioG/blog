@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const authorModel = require('../models/Authors');
 
-const SECRET_KEY = "23qRIYhHnYQfZB1eiL14lL8Za/gkK5U7quK96age"
+const SECRET_KEY = process.env.SECRET_KEY;
 
 const verifyToken = async (req, res, next) => {
   const Authorization = req.get('Authorization');
