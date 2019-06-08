@@ -15,8 +15,9 @@ const app = express();
 
 const PORT = process.env.PORT || 8002;
 
+const MONGO = process.env.NODE_ENV == "test" ? process.env.MONGO_URI_TEST : process.env.MONGO_URI
 
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser:true});
+mongoose.connect(MONGO, {useNewUrlParser:true});
 
 
 app.use(cors());

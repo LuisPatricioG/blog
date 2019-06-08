@@ -29,7 +29,7 @@ const router = express.Router();
 
 router.post('/login',login);
 router.get('/authors',ListAuthors);
-router.get('/authors/deactivated',ListDeactivatedAuthors);
+// router.get('/authors/deactivated',ListDeactivatedAuthors);
 router.post('/authors',CreateAuthor);
 router.patch('/authors', reactivateAuthor);
 router.get('/authors/:id', getSingleAuthor);
